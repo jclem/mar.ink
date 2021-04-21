@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-gray-800;
+  @apply dark:bg-gray-900 dark:text-gray-100;
+}
+
+.prose strong.tldr,
+.tldr {
+  @apply text-blue-600 dark:text-blue-400;
+}
+
+@layer components {
+  .nav-button {
+    @apply inline-flex justify-center;
+    @apply w-full px-4 py-2;
+    @apply rounded-md;
+    @apply bg-gray-200 dark:bg-gray-800 hover:bg-opacity-[75%];
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-black dark:focus-visible:ring-gray-400 focus-visible:ring-opacity-75;
+    @apply text-sm font-medium dark:text-white;
+
+    & svg {
+      @apply w-5 h-5 -mr-1 ml-2;
+      @apply text-gray-900 dark:text-gray-300;
+    }
+
+    &:hover svg {
+      @apply text-gray-600 dark:text-gray-400;
+    }
+  }
+
+  .menu-items-base {
+    @apply z-10;
+    @apply absolute right-0;
+    @apply origin-top-right;
+    @apply rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none;
+    @apply bg-white dark:bg-gray-800;
+    @apply divide-y divide-gray-100 dark:divide-gray-700;
+  }
+
+  .menu-items {
+    @apply menu-items-base;
+    @apply w-56 mt-2;
+  }
+
+  .menu-items-full {
+    @apply menu-items-base;
+    @apply left-0 right-0;
+    @apply mx-2;
+  }
+
+  .menu-item-button {
+    @apply flex rounded-md items-center;
+    @apply w-full p-2;
+    @apply focus:outline-none;
+    @apply text-sm;
+
+    &.disabled,
+    &.disabled svg {
+      @apply cursor-default;
+      @apply text-gray-400;
+      background-color: unset;
+    }
+
+    &.active,
+    &:hover {
+      @apply bg-blue-500;
+      @apply text-white;
+    }
+
+    svg {
+      @apply w-5 h-5 mr-2;
+      @apply text-blue-500;
+    }
+
+    &:hover svg,
+    &.active svg {
+      @apply text-blue-100;
+    }
+  }
+}

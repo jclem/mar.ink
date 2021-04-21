@@ -1,0 +1,49 @@
+{
+  "name": "@jclem/mark.ink",
+  "version": "0.0.0",
+  "dependencies": {
+    "@headlessui/react": "^1.0.0",
+    "@heroicons/react": "^1.0.1",
+    "@monaco-editor/react": "^4.1.3",
+    "chrome-aws-lambda": "^8.0.2",
+    "classnames": "^2.3.1",
+    "js-base64": "^3.6.0",
+    "lodash": "^4.17.21",
+    "mermaid": "^8.9.2",
+    "monaco-editor": "^0.23.0",
+    "next": "^10.1.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.4.0",
+    "@types/lodash": "^4.14.168",
+    "@types/mermaid": "^8.2.5",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "autoprefixer": "^10.2.5",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "npm-run-all": "^4.1.5",
+    "playwright-core": "^1.11.0-next-alpha-apr-22-2021",
+    "postcss-nested": "^5.0.5",
+    "prettier": "^2.2.1",
+    "tailwindcss": "^2.1.1",
+    "typescript": "^4.1.2",
+    "vercel": "^22.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "check": "run-p --aggregate-output --continue-on-error check:build check:format check:lint",
+    "check:build": "tsc",
+    "check:format": "prettier --check .",
+    "check:lint": "eslint .",
+    "deploy": "vercel",
+    "dev": "next dev"
+  }
+}

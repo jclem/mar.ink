@@ -1,0 +1,26 @@
+root: true
+parser: '@typescript-eslint/parser'
+plugins: ['@typescript-eslint']
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:@typescript-eslint/recommended
+  - prettier
+  - plugin:react/recommended
+  - plugin:react-hooks/recommended
+settings: {react: {version: detect}}
+rules:
+  '@typescript-eslint/no-unused-vars':
+    - warn
+    - argsIgnorePattern: '^_'
+      varsIgnorePattern: '^_'
+  'react/prop-types': off
+  'react/react-in-jsx-scope': off
+overrides:
+  - files: ['*.js']
+    env: {node: true}
+    rules:
+      '@typescript-eslint/no-var-requires': off
+  - files: ['*.tsx']
+    rules:
+      '@typescript-eslint/explicit-module-boundary-types': off
