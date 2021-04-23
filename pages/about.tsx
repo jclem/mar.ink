@@ -163,8 +163,8 @@ const AboutPage: NextPage = () => {
         </dl>
 
         <p>
-          For example, to take a dark-mode screenshot at a device scale factor
-          of 1, you would use a path like this:{' '}
+          For example, to get a dark-mode image at a device scale factor of 1,
+          you would use a path like this:{' '}
           <code>
             <a
               href={url(`/api/image/${source}?darkMode=1&deviceScaleFactor=1`)}
