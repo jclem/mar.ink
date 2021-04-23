@@ -1,6 +1,6 @@
 # [mar.ink](https://mar.ink)
 
-A Mermaid diagram viewer and editor
+A [Mermaid](https://mermaid-js.github.io) diagram viewer and editor
 
 ## Development
 
