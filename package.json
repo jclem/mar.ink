@@ -44,7 +44,6 @@
     "check:build": "tsc",
     "check:format": "prettier --check .",
     "check:lint": "eslint .",
-    "deploy": "vercel",
     "dev": "next dev"
   }
 }
